@@ -9,15 +9,25 @@ import UIKit
 
 class NLViewController {
     
+    // MARK: - Public properties
+    
     var view: NLView! {
         didSet {
+            isViewLoaded = true
+            
             viewDidLoad()
         }
     }
     
+    var isViewLoaded: Bool = false
+    
+    // MARK: - Init
+    
     init() {
         loadView()
     }
+    
+    // MARK: - Public methods
     
     func loadView() {
         view = NLView(frame: CGRect(x: .zero, y: .zero, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NLView {
+class NLView: NSObject {
     
     // MARK: - Public properties
     
@@ -31,16 +31,60 @@ class NLView {
         }
     }
     
+    var safeArea: UIEdgeInsets {
+        UIApplication.shared.windows.first?.safeAreaInsets ?? .zero
+    }
+    
     // MARK: - Public stored properties
     
-    var layer: CALayer
+    var layer: CALayer = CALayer()
+    
+    weak var superView: NLView?
+    
+    var subviews: [NLView] = []
     
     // MARK: - Init
     
     init(frame: CGRect = .zero) {
-        self.layer = CALayer()
+        super.init()
         
         self.frame = frame
+        
+        layer.delegate = self
+        
+        setNeedsDisplay()
+    }
+    
+    // MARK: - Public methods
+    
+    func draw(_ bounds: CGRect) {
+        // Needs for subviews
+    }
+    
+    func setNeedsDisplay() {
+        layer.setNeedsDisplay()
+    }
+    
+    func addSubview(_ view: NLView) {
+        subviews.append(view)
+        
+        view.superView = self
+        
+        layer.addSublayer(view.layer)
+    }
+    
+}
+
+// MARK: - CALayerDelegate
+
+extension NLView: CALayerDelegate {
+    
+    func draw(_ layer: CALayer, in ctx: CGContext) {
+        let bounds = ctx.boundingBoxOfClipPath
+        
+        UIGraphicsPushContext(ctx)
+        draw(bounds)
+        UIGraphicsPopContext()
     }
     
 }

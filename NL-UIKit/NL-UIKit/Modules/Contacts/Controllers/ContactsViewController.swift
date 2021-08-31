@@ -9,6 +9,12 @@ import UIKit
 
 final class ContactsViewController: NLViewController {
     
+    // MARK: - Public properties
+    
+    var mainView: ContactsView? {
+        view as? ContactsView
+    }
+    
     // MARK: - Override
     
     override func loadView() {
@@ -17,11 +23,7 @@ final class ContactsViewController: NLViewController {
     }
     
     override func viewDidLoad() {
-        
+        mainView?.update(with: ["Bob", "Sam", "Tom"])
     }
-    
-    // MARK: - Private methods
-    
-    
     
 }
