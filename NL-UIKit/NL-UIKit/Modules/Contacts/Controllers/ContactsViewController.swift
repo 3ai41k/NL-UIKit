@@ -24,10 +24,10 @@ final class ContactsViewController: NLViewController {
     
     override func viewDidLoad() {
         mainView?.update(with: [
-            Contact(userName: "Bob", telephoneName: "Home"),
-            Contact(userName: "Tom", telephoneName: "Home"),
-            Contact(userName: "Dick", telephoneName: "Home"),
-            Contact(userName: "Nick", telephoneName: "Home")
+            Contact(userName: "Bob", telephoneName: "Home", profileImageName: "Bob"),
+            Contact(userName: "Tom", telephoneName: "Home", profileImageName: "Tom"),
+            Contact(userName: "Dick", telephoneName: "Home", profileImageName: "Empty"),
+            Contact(userName: "Nick", telephoneName: "Home", profileImageName: "Empty")
         ])
     }
     

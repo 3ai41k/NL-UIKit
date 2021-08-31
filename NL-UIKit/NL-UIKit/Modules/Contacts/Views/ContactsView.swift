@@ -43,7 +43,7 @@ final class ContactsView: NLView {
             
             let imageFrame = CGRect(x: 8.0, y: 16.0, width: 48.0, height: 48.0)
             let imageView = NLImageView(frame: imageFrame)
-            imageView.image = UIImage(systemName: "person")
+            imageView.image = UIImage(named: model.profileImageName)
             imageView.layer.cornerRadius = 48.0 / 2.0
             imageView.backgroundColor = .red
             

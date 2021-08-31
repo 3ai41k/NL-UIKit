@@ -10,4 +10,5 @@ import Foundation
 struct Contact {
     let userName: String
     let telephoneName: String
+    let profileImageName: String
 }
