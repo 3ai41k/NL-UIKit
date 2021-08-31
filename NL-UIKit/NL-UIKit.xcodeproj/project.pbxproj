@@ -22,6 +22,7 @@
 		14D0B7FB26DEB1F400074A82 /* NLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7FA26DEB1F400074A82 /* NLLabel.swift */; };
 		14D0B7FE26DEB80C00074A82 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7FD26DEB80C00074A82 /* Contact.swift */; };
 		14D0B80126DEBA1700074A82 /* NLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B80026DEBA1700074A82 /* NLImageView.swift */; };
+		14D0B80B26DEC75600074A82 /* NLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B80A26DEC75600074A82 /* NLButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		14D0B7FA26DEB1F400074A82 /* NLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLLabel.swift; sourceTree = "<group>"; };
 		14D0B7FD26DEB80C00074A82 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		14D0B80026DEBA1700074A82 /* NLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageView.swift; sourceTree = "<group>"; };
+		14D0B80A26DEC75600074A82 /* NLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				14D0B7D626DEA36300074A82 /* NLView.swift */,
 				14D0B7FA26DEB1F400074A82 /* NLLabel.swift */,
+				14D0B80A26DEC75600074A82 /* NLButton.swift */,
 				14D0B80026DEBA1700074A82 /* NLImageView.swift */,
 				14D0B7E626DEA7F900074A82 /* NLWindow.swift */,
 				14D0B7E226DEA6A600074A82 /* NLViewController.swift */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D0B7D726DEA36300074A82 /* NLView.swift in Sources */,
+				14D0B80B26DEC75600074A82 /* NLButton.swift in Sources */,
 				14D0B7EC26DEA9D100074A82 /* ContactsViewController.swift in Sources */,
 				14D0B7E726DEA7F900074A82 /* NLWindow.swift in Sources */,
 				14D0B7DF26DEA67000074A82 /* BridgingToUIKitProtocol.swift in Sources */,

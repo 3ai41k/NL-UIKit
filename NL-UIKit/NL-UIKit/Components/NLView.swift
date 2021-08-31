@@ -86,7 +86,7 @@ class NLView: UIResponder {
                 return subview.hitTest(nextPoint, with: event)
             }
         }
-        return self
+        return self //0x600001e18ff0
     }
     
 }

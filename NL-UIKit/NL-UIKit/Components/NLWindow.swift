@@ -37,7 +37,9 @@ class NLWindow: UIWindow {
     // MARK: - Private methods
     
     private func nlHitTest(_ point: CGPoint, with event: UIEvent?) -> NLView? {
-        for subview in vc?.view.subviews ?? [] {
+        guard let subviews = vc?.view.subviews else { return nil }
+        
+        for subview in subviews {
             if subview.frame.contains(point) {
                 let nextPoint = subview.layer.convert(point, to: layer)
                 return subview.hitTest(nextPoint, with: event)

@@ -3,4 +3,70 @@
    uuid = "AD075253-C957-4391-A8EF-3517F5B6BD13"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27E58E36-77CC-4A75-92BE-135F9C1D7FDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NL-UIKit/Modules/Contacts/Views/ContactsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "didInfo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59A08F3D-6114-455C-A7B3-D83DE6C5EE79"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NL-UIKit/Components/NLButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "touchesEnded(_:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59A08F3D-6114-455C-A7B3-D83DE6C5EE79 - 26e92a98cdda8245"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NL_UIKit.NLButton.touchesEnded(_: Swift.Set&lt;__C.UITouch&gt;, with: Swift.Optional&lt;__C.UIEvent&gt;) -&gt; ()"
+                  moduleName = "NL-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/u/Documents/Projects/NL-UIKit/NL-UIKit/NL-UIKit/Components/NLButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "59A08F3D-6114-455C-A7B3-D83DE6C5EE79 - fc3d374036ff6303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((target: Any, action: ObjectiveC.Selector)) -&gt; () in NL_UIKit.NLButton.touchesEnded(_: Swift.Set&lt;__C.UITouch&gt;, with: Swift.Optional&lt;__C.UIEvent&gt;) -&gt; ()"
+                  moduleName = "NL-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/u/Documents/Projects/NL-UIKit/NL-UIKit/NL-UIKit/Components/NLButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "79">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
