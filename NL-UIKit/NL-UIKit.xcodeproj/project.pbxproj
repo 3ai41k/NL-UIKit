@@ -74,16 +74,11 @@
 		14D0B7BF26DEA12100074A82 /* NL-UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				14D0B80626DEC5ED00074A82 /* Resources */,
 				14D0B7F526DEB12100074A82 /* Extensions */,
 				14D0B7DC26DEA62C00074A82 /* Protocols */,
 				14D0B7D526DEA32B00074A82 /* Components */,
 				14D0B7E926DEA97300074A82 /* Modules */,
-				14D0B7C026DEA12100074A82 /* AppDelegate.swift */,
-				14D0B7C226DEA12100074A82 /* SceneDelegate.swift */,
-				14D0B7C626DEA12100074A82 /* Main.storyboard */,
-				14D0B7C926DEA12300074A82 /* Assets.xcassets */,
-				14D0B7CB26DEA12300074A82 /* LaunchScreen.storyboard */,
-				14D0B7CE26DEA12300074A82 /* Info.plist */,
 			);
 			path = "NL-UIKit";
 			sourceTree = "<group>";
@@ -111,6 +106,7 @@
 		14D0B7E926DEA97300074A82 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				14D0B80526DEC5E400074A82 /* Root */,
 				14D0B7EA26DEA9A300074A82 /* Contacts */,
 			);
 			path = Modules;
@@ -153,9 +149,45 @@
 		14D0B7F526DEB12100074A82 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				14D0B7F626DEB12D00074A82 /* UIColor+Random.swift */,
+				14D0B80326DEC5D300074A82 /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14D0B80326DEC5D300074A82 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				14D0B7F626DEB12D00074A82 /* UIColor+Random.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		14D0B80526DEC5E400074A82 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				14D0B7C026DEA12100074A82 /* AppDelegate.swift */,
+				14D0B7C226DEA12100074A82 /* SceneDelegate.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		14D0B80626DEC5ED00074A82 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14D0B7C926DEA12300074A82 /* Assets.xcassets */,
+				14D0B7CE26DEA12300074A82 /* Info.plist */,
+				14D0B80726DEC5F700074A82 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14D0B80726DEC5F700074A82 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				14D0B7C626DEA12100074A82 /* Main.storyboard */,
+				14D0B7CB26DEA12300074A82 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,7 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HS7MB89MW;
-				INFOPLIST_FILE = "NL-UIKit/Info.plist";
+				INFOPLIST_FILE = "NL-UIKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HS7MB89MW;
-				INFOPLIST_FILE = "NL-UIKit/Info.plist";
+				INFOPLIST_FILE = "NL-UIKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
