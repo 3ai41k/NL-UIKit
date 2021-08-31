@@ -7,30 +7,51 @@
 
 import UIKit
 
-class NLWindow: NLView {
-    
-    // MARK: - Public properties
-    
-    var rootViewController: NLViewController?
+class NLWindow: UIWindow {
     
     // MARK: - Private properties
     
-    private let window: UIWindow
+    private var vc: NLViewController?
     
-    // MARK: - Init
+    // MARK: - Override
     
-    init(window: UIWindow) {
-        self.window = window
+    override func sendEvent(_ event: UIEvent) {
+        guard let touches = event.allTouches, let touch = touches.first else { return }
         
-        super.init(frame: CGRect(x: .zero, y: .zero, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let responder = nlHitTest(touch.location(in: self), with: event) ?? self
+        
+        switch touch.phase {
+        case .began:
+            responder.touchesBegan(touches, with: event)
+        case .moved:
+            responder.touchesMoved(touches, with: event)
+        case .ended:
+            responder.touchesEnded(touches, with: event)
+        case .cancelled:
+            responder.touchesCancelled(touches, with: event)
+        default:
+            return
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func nlHitTest(_ point: CGPoint, with event: UIEvent?) -> NLView? {
+        for subview in vc?.view.subviews ?? [] {
+            if subview.frame.contains(point) {
+                let nextPoint = subview.layer.convert(point, to: layer)
+                return subview.hitTest(nextPoint, with: event)
+            }
+        }
+        return nil
     }
     
     // MARK: - Public methods
     
-    func makeKeyAndVisible() {
-        guard let rootVC = rootViewController else { return }
+    func setNLViewController(_ vc: NLViewController) {
+        self.vc = vc
         
-        window.layer.addSublayer(rootVC.view.layer)
+        layer.addSublayer(vc.view.layer)
     }
     
 }

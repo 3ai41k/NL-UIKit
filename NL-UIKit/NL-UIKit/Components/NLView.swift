@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NLView: NSObject {
+class NLView: UIResponder {
     
     // MARK: - Public properties
     
@@ -39,7 +39,7 @@ class NLView: NSObject {
     
     var layer: CALayer = CALayer()
     
-    weak var superView: NLView?
+    weak var superview: NLView?
     
     var subviews: [NLView] = []
     
@@ -55,6 +55,12 @@ class NLView: NSObject {
         setNeedsDisplay()
     }
     
+    // MARK: - Override
+    
+    override var next: UIResponder? {
+        return superview
+    }
+    
     // MARK: - Public methods
     
     func draw(_ bounds: CGRect) {
@@ -68,9 +74,19 @@ class NLView: NSObject {
     func addSubview(_ view: NLView) {
         subviews.append(view)
         
-        view.superView = self
+        view.superview = self
         
         layer.addSublayer(view.layer)
+    }
+    
+    func hitTest(_ point: CGPoint, with event: UIEvent?) -> NLView {
+        for subview in subviews {
+            if subview.frame.contains(point) {
+                let nextPoint = subview.layer.convert(point, to: layer)
+                return subview.hitTest(nextPoint, with: event)
+            }
+        }
+        return self
     }
     
 }
