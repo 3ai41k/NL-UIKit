@@ -20,6 +20,8 @@
 		14D0B7F326DEAA4900074A82 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7F226DEAA4900074A82 /* ContactsView.swift */; };
 		14D0B7F726DEB12D00074A82 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7F626DEB12D00074A82 /* UIColor+Random.swift */; };
 		14D0B7FB26DEB1F400074A82 /* NLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7FA26DEB1F400074A82 /* NLLabel.swift */; };
+		14D0B7FE26DEB80C00074A82 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7FD26DEB80C00074A82 /* Contact.swift */; };
+		14D0B80126DEBA1700074A82 /* NLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B80026DEBA1700074A82 /* NLImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		14D0B7F226DEAA4900074A82 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		14D0B7F626DEB12D00074A82 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		14D0B7FA26DEB1F400074A82 /* NLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLLabel.swift; sourceTree = "<group>"; };
+		14D0B7FD26DEB80C00074A82 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		14D0B80026DEBA1700074A82 /* NLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			children = (
 				14D0B7D626DEA36300074A82 /* NLView.swift */,
 				14D0B7FA26DEB1F400074A82 /* NLLabel.swift */,
+				14D0B80026DEBA1700074A82 /* NLImageView.swift */,
 				14D0B7E626DEA7F900074A82 /* NLWindow.swift */,
 				14D0B7E226DEA6A600074A82 /* NLViewController.swift */,
 			);
@@ -124,6 +129,7 @@
 		14D0B7EE26DEAA0700074A82 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14D0B7FD26DEB80C00074A82 /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 				14D0B7DF26DEA67000074A82 /* BridgingToUIKitProtocol.swift in Sources */,
 				14D0B7F726DEB12D00074A82 /* UIColor+Random.swift in Sources */,
 				14D0B7C126DEA12100074A82 /* AppDelegate.swift in Sources */,
+				14D0B7FE26DEB80C00074A82 /* Contact.swift in Sources */,
 				14D0B7FB26DEB1F400074A82 /* NLLabel.swift in Sources */,
+				14D0B80126DEBA1700074A82 /* NLImageView.swift in Sources */,
 				14D0B7C326DEA12100074A82 /* SceneDelegate.swift in Sources */,
 				14D0B7E326DEA6A600074A82 /* NLViewController.swift in Sources */,
 				14D0B7F326DEAA4900074A82 /* ContactsView.swift in Sources */,
