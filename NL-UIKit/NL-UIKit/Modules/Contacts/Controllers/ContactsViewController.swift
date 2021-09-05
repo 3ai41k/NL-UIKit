@@ -7,28 +7,61 @@
 
 import UIKit
 
+struct ContactsDependencies {
+    let httpRequestExecutor: HTTPRequestExecutorProtocol
+}
+
 final class ContactsViewController: NLViewController {
     
     // MARK: - Public properties
     
-    var mainView: ContactsView? {
+    var dependencies: ContactsDependencies?
+    
+    // MARK: - Private properties
+    
+    // Data
+    private var contacts: [Contact] = []
+    
+    // Views
+    private var mainView: ContactsView? {
         view as? ContactsView
     }
     
-    // MARK: - Override
+    // MARK: - Lifecycle
     
     override func loadView() {
-        view = ContactsView()
+        let view = ContactsView()
+        view.delegate = self
         view.frame = CGRect(x: .zero, y: .zero, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        self.view = view
     }
     
     override func viewDidLoad() {
-        mainView?.update(with: [
-            Contact(userName: "Bob", telephoneName: "Home", profileImageName: "Bob"),
-            Contact(userName: "Tom", telephoneName: "Home", profileImageName: "Tom"),
-            Contact(userName: "Dick", telephoneName: "Home", profileImageName: "Empty"),
-            Contact(userName: "Nick", telephoneName: "Home", profileImageName: "Empty")
-        ])
+        fetchData()
+    }
+    
+    // MARK: - Private methods
+    
+    private func fetchData() {
+        let request = GetContactsRequest { (contacts) in
+            self.contacts = contacts
+            
+            self.mainView?.update(with: contacts)
+        }
+        dependencies?.httpRequestExecutor.perform(request)
+    }
+    
+}
+
+// MARK: - ContactsViewDelegate
+
+extension ContactsViewController: ContactsViewDelegate {
+    
+    func didSelectInfo(for index: Int) {
+        // TO DO: - Navigate somewhere
+        
+        print(contacts[index])
     }
     
 }

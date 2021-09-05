@@ -54,6 +54,20 @@ class NLWindow: UIWindow {
         self.vc = vc
         
         layer.addSublayer(vc.view.layer)
+        
+        vc.viewDidLoad()
+    }
+    
+    override func becomeKey() {
+        super.becomeKey()
+        
+        vc?.viewWillAppear()
+    }
+    
+    override func makeKeyAndVisible() {
+        super.makeKeyAndVisible()
+        
+        vc?.viewDidAppear()
     }
     
 }

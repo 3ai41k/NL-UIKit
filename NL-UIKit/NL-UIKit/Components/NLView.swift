@@ -35,6 +35,8 @@ class NLView: UIResponder {
         UIApplication.shared.windows.first?.safeAreaInsets ?? .zero
     }
     
+    var tag: Int = .zero
+    
     // MARK: - Public stored properties
     
     var layer: CALayer = CALayer()

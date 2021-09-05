@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol ContactsViewDelegate: class {
+    func didSelectInfo(for index: Int)
+}
+
 final class ContactsView: NLView {
+    
+    // MARK: - Public properties
+    
+    weak var delegate: ContactsViewDelegate?
     
     // MARK: - Private properties
     
@@ -67,6 +75,7 @@ final class ContactsView: NLView {
             
             let infoFrame = CGRect(x: contentFrame.width - 80.0, y: 8.0, width: 64.0, height: 64.0)
             let infoButton = NLButton(frame: infoFrame)
+            infoButton.tag = index
             infoButton.backgroundColor = .blue
             infoButton.addTarget(self, #selector(didInfo))
 
@@ -78,8 +87,8 @@ final class ContactsView: NLView {
     
     // MARK: - Actions
     
-    @objc private func didInfo(_ sender: Any) {
-        print(#function)
+    @objc private func didInfo(_ sender: NLButton) {
+        delegate?.didSelectInfo(for: sender.tag)
     }
     
 }

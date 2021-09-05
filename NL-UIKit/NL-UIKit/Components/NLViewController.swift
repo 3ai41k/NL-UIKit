@@ -14,8 +14,6 @@ class NLViewController {
     var view: NLView! {
         didSet {
             isViewLoaded = true
-            
-            viewDidLoad()
         }
     }
     
@@ -34,6 +32,14 @@ class NLViewController {
     }
     
     func viewDidLoad() {
+        
+    }
+    
+    func viewWillAppear() {
+        
+    }
+    
+    func viewDidAppear() {
         
     }
     

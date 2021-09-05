@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1411BDF526E4FA1F00AA0B68 /* HTTPRequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411BDF426E4FA1F00AA0B68 /* HTTPRequestExecutor.swift */; };
+		1411BDFB26E4FAC700AA0B68 /* GetContactsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411BDFA26E4FAC700AA0B68 /* GetContactsRequest.swift */; };
 		14D0B7C126DEA12100074A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7C026DEA12100074A82 /* AppDelegate.swift */; };
 		14D0B7C326DEA12100074A82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7C226DEA12100074A82 /* SceneDelegate.swift */; };
 		14D0B7C826DEA12100074A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D0B7C626DEA12100074A82 /* Main.storyboard */; };
 		14D0B7CA26DEA12300074A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D0B7C926DEA12300074A82 /* Assets.xcassets */; };
 		14D0B7CD26DEA12300074A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D0B7CB26DEA12300074A82 /* LaunchScreen.storyboard */; };
 		14D0B7D726DEA36300074A82 /* NLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7D626DEA36300074A82 /* NLView.swift */; };
-		14D0B7DF26DEA67000074A82 /* BridgingToUIKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7DE26DEA67000074A82 /* BridgingToUIKitProtocol.swift */; };
 		14D0B7E326DEA6A600074A82 /* NLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7E226DEA6A600074A82 /* NLViewController.swift */; };
 		14D0B7E726DEA7F900074A82 /* NLWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7E626DEA7F900074A82 /* NLWindow.swift */; };
 		14D0B7EC26DEA9D100074A82 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7EB26DEA9D100074A82 /* ContactsViewController.swift */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1411BDF426E4FA1F00AA0B68 /* HTTPRequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestExecutor.swift; sourceTree = "<group>"; };
+		1411BDFA26E4FAC700AA0B68 /* GetContactsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactsRequest.swift; sourceTree = "<group>"; };
 		14D0B7BD26DEA12100074A82 /* NL-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NL-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D0B7C026DEA12100074A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14D0B7C226DEA12100074A82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +37,6 @@
 		14D0B7CC26DEA12300074A82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14D0B7CE26DEA12300074A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D0B7D626DEA36300074A82 /* NLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLView.swift; sourceTree = "<group>"; };
-		14D0B7DE26DEA67000074A82 /* BridgingToUIKitProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgingToUIKitProtocol.swift; sourceTree = "<group>"; };
 		14D0B7E226DEA6A600074A82 /* NLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLViewController.swift; sourceTree = "<group>"; };
 		14D0B7E626DEA7F900074A82 /* NLWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLWindow.swift; sourceTree = "<group>"; };
 		14D0B7EB26DEA9D100074A82 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1411BDF226E4F9E300AA0B68 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1411BDF326E4F9E900AA0B68 /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1411BDF326E4F9E900AA0B68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1411BDF826E4FAA800AA0B68 /* HTTP */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1411BDF826E4FAA800AA0B68 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				1411BDF426E4FA1F00AA0B68 /* HTTPRequestExecutor.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		1411BDF926E4FAB600AA0B68 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1411BDFA26E4FAC700AA0B68 /* GetContactsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		14D0B7B426DEA12100074A82 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +112,8 @@
 			children = (
 				14D0B80626DEC5ED00074A82 /* Resources */,
 				14D0B7F526DEB12100074A82 /* Extensions */,
-				14D0B7DC26DEA62C00074A82 /* Protocols */,
 				14D0B7D526DEA32B00074A82 /* Components */,
+				1411BDF226E4F9E300AA0B68 /* Core */,
 				14D0B7E926DEA97300074A82 /* Modules */,
 			);
 			path = "NL-UIKit";
@@ -96,14 +130,6 @@
 				14D0B7E226DEA6A600074A82 /* NLViewController.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		14D0B7DC26DEA62C00074A82 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				14D0B7DE26DEA67000074A82 /* BridgingToUIKitProtocol.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		14D0B7E926DEA97300074A82 /* Modules */ = {
@@ -129,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				14D0B7FD26DEB80C00074A82 /* Contact.swift */,
+				1411BDF926E4FAB600AA0B68 /* Requests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,10 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D0B7D726DEA36300074A82 /* NLView.swift in Sources */,
+				1411BDF526E4FA1F00AA0B68 /* HTTPRequestExecutor.swift in Sources */,
 				14D0B80B26DEC75600074A82 /* NLButton.swift in Sources */,
 				14D0B7EC26DEA9D100074A82 /* ContactsViewController.swift in Sources */,
 				14D0B7E726DEA7F900074A82 /* NLWindow.swift in Sources */,
-				14D0B7DF26DEA67000074A82 /* BridgingToUIKitProtocol.swift in Sources */,
+				1411BDFB26E4FAC700AA0B68 /* GetContactsRequest.swift in Sources */,
 				14D0B7F726DEB12D00074A82 /* UIColor+Random.swift in Sources */,
 				14D0B7C126DEA12100074A82 /* AppDelegate.swift in Sources */,
 				14D0B7FE26DEB80C00074A82 /* Contact.swift in Sources */,
