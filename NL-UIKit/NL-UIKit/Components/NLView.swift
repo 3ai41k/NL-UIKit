@@ -82,11 +82,11 @@ class NLView: UIResponder {
     func hitTest(_ point: CGPoint, with event: UIEvent?) -> NLView {
         for subview in subviews {
             if subview.frame.contains(point) {
-                let nextPoint = subview.layer.convert(point, to: layer)
+                let nextPoint = subview.layer.convert(point, from: layer)
                 return subview.hitTest(nextPoint, with: event)
             }
         }
-        return self //0x600001e18ff0
+        return self
     }
     
 }

@@ -41,7 +41,7 @@ class NLWindow: UIWindow {
         
         for subview in subviews {
             if subview.frame.contains(point) {
-                let nextPoint = subview.layer.convert(point, to: layer)
+                let nextPoint = subview.layer.convert(point, from: layer)
                 return subview.hitTest(nextPoint, with: event)
             }
         }

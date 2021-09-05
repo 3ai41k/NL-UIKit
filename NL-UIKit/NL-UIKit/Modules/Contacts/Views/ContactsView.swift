@@ -46,23 +46,23 @@ final class ContactsView: NLView {
             imageView.image = UIImage(named: model.profileImageName)
             imageView.layer.cornerRadius = 48.0 / 2.0
             imageView.backgroundColor = .red
-            
+
             contentView.addSubview(imageView)
-            
-            let userNamelabelFrame = CGRect(x: 64.0, y: 16.0, width: contentFrame.width - 64.0, height: contentFrame.height - 16.0)
+
+            let userNamelabelFrame = CGRect(x: 64.0, y: 16.0, width: 64.0, height: contentFrame.height - 16.0)
             let userNamelabel = NLLabel(frame: userNamelabelFrame)
             userNamelabel.text = model.userName
             userNamelabel.textColor = .black
             userNamelabel.font = .systemFont(ofSize: 24.0)
-            
+
             contentView.addSubview(userNamelabel)
-            
-            let telephoneNameFrame = CGRect(x: 64.0, y: 48.0, width: contentFrame.width - 64.0, height: contentFrame.height - 48.0)
+
+            let telephoneNameFrame = CGRect(x: 64.0, y: 48.0, width: 64.0, height: contentFrame.height - 48.0)
             let telephoneNameLabel = NLLabel(frame: telephoneNameFrame)
             telephoneNameLabel.text = model.telephoneName
             telephoneNameLabel.textColor = .black
             telephoneNameLabel.font = .systemFont(ofSize: 17.0)
-            
+
             contentView.addSubview(telephoneNameLabel)
             
             let infoFrame = CGRect(x: contentFrame.width - 80.0, y: 8.0, width: 64.0, height: 64.0)
