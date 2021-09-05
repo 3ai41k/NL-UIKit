@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1411BDF526E4FA1F00AA0B68 /* HTTPRequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411BDF426E4FA1F00AA0B68 /* HTTPRequestExecutor.swift */; };
 		1411BDFB26E4FAC700AA0B68 /* GetContactsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411BDFA26E4FAC700AA0B68 /* GetContactsRequest.swift */; };
+		1411BE0026E4FF2D00AA0B68 /* NLGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411BDFF26E4FF2D00AA0B68 /* NLGestureRecognizer.swift */; };
 		14D0B7C126DEA12100074A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7C026DEA12100074A82 /* AppDelegate.swift */; };
 		14D0B7C326DEA12100074A82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0B7C226DEA12100074A82 /* SceneDelegate.swift */; };
 		14D0B7C826DEA12100074A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D0B7C626DEA12100074A82 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1411BDF426E4FA1F00AA0B68 /* HTTPRequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestExecutor.swift; sourceTree = "<group>"; };
 		1411BDFA26E4FAC700AA0B68 /* GetContactsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactsRequest.swift; sourceTree = "<group>"; };
+		1411BDFF26E4FF2D00AA0B68 /* NLGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLGestureRecognizer.swift; sourceTree = "<group>"; };
 		14D0B7BD26DEA12100074A82 /* NL-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NL-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D0B7C026DEA12100074A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14D0B7C226DEA12100074A82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		1411BDFE26E4FF1B00AA0B68 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				1411BDFF26E4FF2D00AA0B68 /* NLGestureRecognizer.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		14D0B7B426DEA12100074A82 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		14D0B7D526DEA32B00074A82 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1411BDFE26E4FF1B00AA0B68 /* Gestures */,
 				14D0B7D626DEA36300074A82 /* NLView.swift */,
 				14D0B7FA26DEB1F400074A82 /* NLLabel.swift */,
 				14D0B80A26DEC75600074A82 /* NLButton.swift */,
@@ -300,6 +311,7 @@
 				14D0B7C126DEA12100074A82 /* AppDelegate.swift in Sources */,
 				14D0B7FE26DEB80C00074A82 /* Contact.swift in Sources */,
 				14D0B7FB26DEB1F400074A82 /* NLLabel.swift in Sources */,
+				1411BE0026E4FF2D00AA0B68 /* NLGestureRecognizer.swift in Sources */,
 				14D0B80126DEBA1700074A82 /* NLImageView.swift in Sources */,
 				14D0B7C326DEA12100074A82 /* SceneDelegate.swift in Sources */,
 				14D0B7E326DEA6A600074A82 /* NLViewController.swift in Sources */,

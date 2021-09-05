@@ -43,7 +43,8 @@ class NLView: UIResponder {
     
     weak var superview: NLView?
     
-    var subviews: [NLView] = []
+    private(set) var subviews: [NLView] = []
+    private(set) var gestures: [NLGestureRecognizer] = []
     
     // MARK: - Init
     
@@ -79,6 +80,10 @@ class NLView: UIResponder {
         view.superview = self
         
         layer.addSublayer(view.layer)
+    }
+    
+    func addGesture(_ gesture: NLGestureRecognizer) {
+        gestures.append(gesture)
     }
     
     func hitTest(_ point: CGPoint, with event: UIEvent?) -> NLView {

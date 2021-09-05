@@ -16,9 +16,13 @@ class NLWindow: UIWindow {
     // MARK: - Override
     
     override func sendEvent(_ event: UIEvent) {
-        guard let touches = event.allTouches, let touch = touches.first else { return }
-        
-        let responder = nlHitTest(touch.location(in: self), with: event) ?? self
+        guard
+            let touches = event.allTouches,
+            let touch = touches.first,
+            let responder = nlHitTest(touch.location(in: self), with: event)
+        else {
+            return
+        }
         
         switch touch.phase {
         case .began:
@@ -26,7 +30,13 @@ class NLWindow: UIWindow {
         case .moved:
             responder.touchesMoved(touches, with: event)
         case .ended:
-            responder.touchesEnded(touches, with: event)
+            if responder.gestures.isEmpty {
+                responder.touchesEnded(touches, with: event)
+            } else {
+                responder.gestures.forEach({
+                    $0.touchesEnded(touches, with: event)
+                })
+            }
         case .cancelled:
             responder.touchesCancelled(touches, with: event)
         default:

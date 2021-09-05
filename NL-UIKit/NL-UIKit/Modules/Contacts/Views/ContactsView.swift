@@ -38,8 +38,12 @@ final class ContactsView: NLView {
     // MARK: - Public methods
     
     func update(with models: [Contact]) {
-        let containerFrame = CGRect(x: .zero, y: safeArea.top, width: screenBounds.width, height: screenBounds.width - safeArea.bottom)
+        let containerFrame = CGRect(x: .zero, y: safeArea.top, width: screenBounds.width, height: screenBounds.height)
         let containerView = NLView(frame: containerFrame)
+        containerView.backgroundColor = .white
+        
+        let gesture = NLGestureRecognizer(target: self, action: #selector(didContainer))
+        containerView.addGesture(gesture)
         
         addSubview(containerView)
         
@@ -86,6 +90,10 @@ final class ContactsView: NLView {
     }
     
     // MARK: - Actions
+    
+    @objc private func didContainer(_ sender: Any) {
+        print("Test gesture recognizer")
+    }
     
     @objc private func didInfo(_ sender: NLButton) {
         delegate?.didSelectInfo(for: sender.tag)
